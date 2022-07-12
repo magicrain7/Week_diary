@@ -1,0 +1,43 @@
+body {
+    background-url: "https://hanghae99.spartacodingclub.kr/static/images/og_new.jpg";
+    background-color: rgba(16, 113, 173, 0.9);
+    min-height: 100vh;
+
+}
+
+.section {
+    padding: 1rem 1.5rem;
+    max-width: 750px;
+    margin: auto;
+}
+
+.is-sparta {
+    color: #ad1013 !important;
+}
+
+.button.is-sparta {
+    background-color: #ad1013;
+    border-color: transparent;
+    color: #fff !important;
+}
+
+.button.is-sparta.is-outlined {
+    background-color: transparent;
+    border-color: #ad1013;
+    color: #ad1013 !important;
+}
+
+.modal-content {
+    width: 600px;
+    max-width: 80%;
+}
+
+input::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+.image img {
+    object-fit:cover;
+    width:100%;
+    height:100%;
+}
