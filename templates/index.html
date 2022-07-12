@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <title>항해일주 작성 페이지</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+
+
+    <script>
+    </script>
+
+    <style>
+        .mypicture {
+            width: 100%;
+            height: 300px;
+
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://cdn.pixabay.com/photo/2019/07/29/20/32/sailboat-4371493_1280.jpg');
+            background-position: center 70%;
+            background-size: cover;
+        }
+
+        .title {
+            width: 350px;
+            height: 40px;
+
+            margin-right: 15px;
+        }
+
+        .post {
+            height: 300px;
+            width: 500px;
+
+            margin-top: 30px;
+        }
+
+        .input-mb-3 {
+            margin: 40px;
+        }
+
+        .date {
+            width: 120px;
+            height: 40px;
+        }
+
+        .mytitle {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            margin: 30px 10px 10px 0;
+        }
+
+    </style>
+    <script>
+        function post() {
+            let title = $("#title").val()
+            let comment = $("#post").val()
+            let date = $("#date").val()
+
+            $.ajax({
+                type: "POST",
+                url: "/posting",
+                data: {
+                    title_give: title,
+                    comment_give: comment,
+                    date_give: date
+                },
+                success: function (response) {
+                    console.log("di")
+                    alert(response[msg])
+                    window.location.reload()
+                }
+            })
+        }
+    </script>
+</head>
+<body>
+<div class="mypicture">
+
+</div>
+<div class="mytitle">
+    <div class="myftitle">
+        <input type="text" class="title" id="title" placeholder="제목을 입력해주세요.">
+        <input type="text" class="date" id="date" placeholder="작성일 yy-mm-dd">
+    </div>
+    <div class="input-group">
+        <input type="text" class="post" id="post" placeholder="내용을 입력해주세요.">
+    </div>
+    <div class="input-mb-3">
+        <input type="file" class="form-file" id="inputGroupFile02">
+        <button onclick="post()" type="button" class="btn btn-dark">작성하기</button>
+    </div>
+</div>
+</div>
+</div>
+</body>
+</html>
