@@ -62,62 +62,6 @@
         }
 
     </style>
-
-
-    <title>항해일주</title>
-</head>
-<body>
-<!--모달-->
-<div class="modal-bg">
-    <div class="modal-position-set">
-        <div class="modal-wh">
-            <div class="container py-4">
-                <input class="input" id="title" type="text" placeholder="제목">
-            </div>
-            <div class="container">
-                <div class="control">
-                    <textarea class="textarea has-fixed-size" id="comment" placeholder="내용을 입력하세요" rows="13"></textarea>
-                </div>
-                <div class="container py-1"></div>
-                <div class="container">
-                    <div class="field is-grouped my-3 is-grouped-right">
-                        <p class="control">
-                            <a class="button is-primary" id="sending_btn" onclick="posting()">
-                                완료
-                            </a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-</div>
-
-<!--상단-->
-<div class="container">
-    <div class="field is-grouped my-3 is-grouped-right">
-        <p class="control">
-            <a class="button is-primary" id="posting_btn">
-                포스팅하기
-            </a>
-        </p>
-    </div>
-</div>
-<!--메인 이미지-->
-<div class="container">
-    <div class="main-img"></div>
-</div>
-<!--하단-->
-<div class="container" id="cards-box">
-</div>
-
-<script>
-    src = "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity = "sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin = "anonymous"
-</script>
 <script>
     $('#posting_btn').on('click', function () {
         document.querySelector('.modal-bg').classList.add('show-modal')
@@ -173,7 +117,62 @@
         })
     }
 
-
 </script>
+
+    <title>항해일주</title>
+</head>
+<body>
+<!--모달-->
+<div class="modal-bg">
+    <div class="modal-position-set">
+        <div class="modal-wh">
+            <div class="container py-4">
+                <input class="input" id="title" type="text" placeholder="제목">
+            </div>
+            <div class="container">
+                <div class="control">
+                    <textarea class="textarea has-fixed-size" id="comment" placeholder="내용을 입력하세요" rows="13"></textarea>
+                </div>
+                <div class="container py-1"></div>
+                <div class="container">
+                    <div class="field is-grouped my-3 is-grouped-right">
+                        <p class="control">
+                            <a class="button is-primary" id="sending_btn" onclick="posting()">
+                                완료
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<!--상단-->
+<div class="container">
+    <div class="field is-grouped my-3 is-grouped-right">
+        <p class="control">
+            <a class="button is-primary" id="posting_btn">
+                포스팅하기
+            </a>
+        </p>
+    </div>
+</div>
+<!--메인 이미지-->
+<div class="container">
+    <div class="main-img"></div>
+</div>
+<!--하단-->
+<div class="container" id="cards-box">
+</div>
+
+<script>
+    src = "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity = "sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin = "anonymous"
+</script>
+
 </body>
 </html>
